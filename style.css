@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* fonts
+
+1- font-family: 'Fraunces', serif;
+2- font-family: 'Montserrat', sans-serif;
+
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: burlywood;
+}
+
+.card-par {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card-par .img {
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 318px;
+    height: 420px;
+}
+
+
+.card-par .text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 310px;
+    height: 420px;
+}
+
+.card-par .text h2:not(.price h2) {
+    font-family: 'Fraunces', serif;
+    padding-right: 130px;
+    margin-left: 20px
+}
+
+.card-par .text p {
+    width: 224px;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-par .text span:not(.price span) {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 14px;
+}
+
+.card-par .price {
+    display: flex;
+    align-items: center;
+}
+
+.card-par .price h2 {
+    color: hsl(158, 36%, 37%);
+    margin: 0 20px 5px;
+    font-family: 'Fraunces', serif;
+}
+
+.card-par .price span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    width: 190px;
+}
+
+.card-par .but_link {
+    width: 258px;
+    padding: 17px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-55%);
+    background-color: hsl(158, 36%, 37%);
+    margin: 10px 5px 0 5px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card-par .but_link a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.card-par .but_link ion-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.card-par .but_link:hover {
+    background-color: hsl(117deg 29% 20%);
+}
+
+/* mobile */
+
+@media(max-width:374px) {
+    .card-par {
+        flex-direction: column;
+    }
+
+    .card-par .img {
+        height: 265px;
+        background-image: url(images/image-product-mobile.jpg);
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .card-par .text {
+        width: 310px;
+        height: 374px;
+    }
+
+    .card-par .text .but_link {
+        padding: 14px;
+        width: 286px;
+        margin: 10px 5px 0 18px;
+    }
+}
+
+@media(max-width:767px) {
+    .card-par {
+        flex-direction: column;
+    }
+
+    .card-par .img {
+        height: 265px;
+        background-image: url(images/image-product-mobile.jpg);
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .card-par .text {
+        width: 310px;
+        height: 374px;
+    }
+
+    .card-par .text .but_link {
+        padding: 14px;
+        width: 286px;
+        margin: 10px 5px 0 18px;
+    }
+}
